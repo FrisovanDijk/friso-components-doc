@@ -3,13 +3,13 @@
     <title><![CDATA[Friso&#039;s Component API Documentation]]></title>
     <link href="/blog/tags/particle.xml" rel="self"/>
     <link href="/"/>
-    <updated>2019-09-07T23:52:58+02:00</updated>
+    <updated>2019-09-08T00:53:02+02:00</updated>
     <id>/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Simple pop]]></title>
             <link href="/particles/js-simple-pop/"/>
-            <updated>2019-09-07T23:52:58+02:00</updated>
+            <updated>2019-09-08T00:53:02+02:00</updated>
             <id>/particles/js-simple-pop/</id>
             <content type="html"><![CDATA[<p>A particle that appends the result of an API call to a parent container and hides it on click.</p>
 <p>This is an alert appended to a fixed container:</p>

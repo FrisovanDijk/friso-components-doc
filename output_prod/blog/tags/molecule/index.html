@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head lang="en">
-        <title>Tag Archive "molecule" &mdash; Friso&#039;s Component API Documentation &mdash; </title>
+        <title>molecule &mdash; Friso&#039;s Component API Documentation &mdash; </title>
         <meta charset="utf-8">
         <meta name="theme-color" content="#ffffff">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,23 +29,33 @@
 </div>
 
         <main role="main" class="w-90 mw7 center flex-grow-1 mt6 mb12">
-            <h2>"molecule"</h2>
-        <h3>September 2019</h3>
-<article>
-  <div><a href="/molecules/alert/">Alert</a></div>
-</article>
-<article>
-  <div><a href="/molecules/breadcrumbs/">Breadcrumbs</a></div>
-</article>
-<article>
-  <div><a href="/molecules/ghost-menu/">Ghost menu</a></div>
-</article>
-<article>
-  <div><a href="/molecules/tag-list/">Tag list</a></div>
-</article>
+                <article class="bg-grays-white br4 pa4 h-100 flex flex-column">
+        <header>
+            <h1>Tag list</h1>
+        </header>
+        <div class="flex-grow-1 mb5 overflow-y-auto">
+                            
+<div id="tags"></div>
+<script>
+    parseComponentHTML("#tags", {
+        "name": "tag-list",
+        "vars": {
+            "color": "secondary",
+            "tags": [
+                            {"name": "Alert", "url": "/molecules/alert/"},
+                            {"name": "Breadcrumbs", "url": "/molecules/breadcrumbs/"},
+                            {"name": "Ghost menu", "url": "/molecules/ghost-menu/"},
+                            {"name": "Tag list", "url": "/molecules/tag-list/"},
+                        ]
+        }
+    });
 
-<div>
-</div>
+    document.querySelector("h1").innerHTML = "molecule";
+</script>
+
+                    </div>
+
+            </article>
         </main>
         <footer class="tc w-100 pv3 bg-wcag-primary flex-shrink-0">
     By <a href="https://www.frisovandijk.com" class="b no-underline hover-underline c-light">Friso van Dijk</a>

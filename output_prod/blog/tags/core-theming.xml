@@ -3,69 +3,69 @@
     <title><![CDATA[Friso&#039;s Component API Documentation]]></title>
     <link href="/blog/tags/core-theming.xml" rel="self"/>
     <link href="/"/>
-    <updated>2019-09-07T23:52:58+02:00</updated>
+    <updated>2019-09-08T00:53:02+02:00</updated>
     <id>/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Background size]]></title>
             <link href="/particles/core-theming/background-size/"/>
-            <updated>2019-09-07T23:52:58+02:00</updated>
+            <updated>2019-09-08T00:53:02+02:00</updated>
             <id>/particles/core-theming/background-size/</id>
             <content type="html"><![CDATA[https://component.frisovandijk.com/api/source/css/core/theming/_background-size.scss]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[Border color]]></title>
             <link href="/particles/core-theming/border-color/"/>
-            <updated>2019-09-07T23:52:58+02:00</updated>
+            <updated>2019-09-08T00:53:02+02:00</updated>
             <id>/particles/core-theming/border-color/</id>
             <content type="html"><![CDATA[https://component.frisovandijk.com/api/source/css/core/theming/_border-color.scss]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[Border hover]]></title>
             <link href="/particles/core-theming/border-hover/"/>
-            <updated>2019-09-07T23:52:58+02:00</updated>
+            <updated>2019-09-08T00:53:02+02:00</updated>
             <id>/particles/core-theming/border-hover/</id>
             <content type="html"><![CDATA[https://component.frisovandijk.com/api/source/css/core/theming/_border-hover.scss]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[Border radius]]></title>
             <link href="/particles/core-theming/border-radius/"/>
-            <updated>2019-09-07T23:52:58+02:00</updated>
+            <updated>2019-09-08T00:53:02+02:00</updated>
             <id>/particles/core-theming/border-radius/</id>
             <content type="html"><![CDATA[https://component.frisovandijk.com/api/source/css/core/theming/_border-radius.scss]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[Bordersstyle]]></title>
             <link href="/particles/core-theming/border-style/"/>
-            <updated>2019-09-07T23:52:58+02:00</updated>
+            <updated>2019-09-08T00:53:02+02:00</updated>
             <id>/particles/core-theming/border-style/</id>
             <content type="html"><![CDATA[https://component.frisovandijk.com/api/source/css/core/theming/_border-style.scss]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[Border width]]></title>
             <link href="/particles/core-theming/border-width/"/>
-            <updated>2019-09-07T23:52:58+02:00</updated>
+            <updated>2019-09-08T00:53:02+02:00</updated>
             <id>/particles/core-theming/border-width/</id>
             <content type="html"><![CDATA[https://component.frisovandijk.com/api/source/css/core/theming/_border-width.scss]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[Borders]]></title>
             <link href="/particles/core-theming/borders/"/>
-            <updated>2019-09-07T23:52:58+02:00</updated>
+            <updated>2019-09-08T00:53:02+02:00</updated>
             <id>/particles/core-theming/borders/</id>
             <content type="html"><![CDATA[https://component.frisovandijk.com/api/source/css/core/theming/_borders.scss]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[Box shadow]]></title>
             <link href="/particles/core-theming/box-shadow/"/>
-            <updated>2019-09-07T23:52:58+02:00</updated>
+            <updated>2019-09-08T00:53:02+02:00</updated>
             <id>/particles/core-theming/box-shadow/</id>
             <content type="html"><![CDATA[https://component.frisovandijk.com/api/source/css/core/theming/_box-shadow.scss]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[Colors]]></title>
             <link href="/particles/core-theming/colors/"/>
-            <updated>2019-09-07T23:52:58+02:00</updated>
+            <updated>2019-09-08T00:53:02+02:00</updated>
             <id>/particles/core-theming/colors/</id>
             <content type="html"><![CDATA[<div class="w-100 flex flex-wrap center bg-grays-white pa2">
     <div class="cf w-100 flex flex-wrap">
@@ -238,7 +238,7 @@ c-inherit  = inherit text color from parent
             <entry>
             <title type="html"><![CDATA[Hovers]]></title>
             <link href="/particles/core-theming/hovers/"/>
-            <updated>2019-09-07T23:52:58+02:00</updated>
+            <updated>2019-09-08T00:53:02+02:00</updated>
             <id>/particles/core-theming/hovers/</id>
             <content type="html"><![CDATA[<div class="dim w5 pa2 ma1 tc bg-wcag-primary center">dim</div>
 <div class="glow w5 pa2 ma1 tc bg-wcag-secondary center o-40">glow</div>

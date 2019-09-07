@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head lang="en">
-        <title>Tag Archive "core-layout" &mdash; Friso&#039;s Component API Documentation &mdash; </title>
+        <title>core-layout &mdash; Friso&#039;s Component API Documentation &mdash; </title>
         <meta charset="utf-8">
         <meta name="theme-color" content="#ffffff">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,32 +29,35 @@
 </div>
 
         <main role="main" class="w-90 mw7 center flex-grow-1 mt6 mb12">
-            <h2>"core-layout"</h2>
-        <h3>September 2019</h3>
-<article>
-  <div><a href="/particles/core-layout/overflow/">Overflow</a></div>
-</article>
-<article>
-  <div><a href="/particles/core-layout/position/">Position</a></div>
-</article>
-<article>
-  <div><a href="/particles/core-layout/rotations/">Rotations</a></div>
-</article>
-<article>
-  <div><a href="/particles/core-layout/spacing/">Spacing</a></div>
-</article>
-<article>
-  <div><a href="/particles/core-layout/widths/">Widths</a></div>
-</article>
-<article>
-  <div><a href="/particles/core-layout/z-index/">Z-index</a></div>
-</article>
+                <article class="bg-grays-white br4 pa4 h-100 flex flex-column">
+        <header>
+            <h1>Tag list</h1>
+        </header>
+        <div class="flex-grow-1 mb5 overflow-y-auto">
+                            
+<div id="tags"></div>
+<script>
+    parseComponentHTML("#tags", {
+        "name": "tag-list",
+        "vars": {
+            "color": "secondary",
+            "tags": [
+                            {"name": "Overflow", "url": "/particles/core-layout/overflow/"},
+                            {"name": "Position", "url": "/particles/core-layout/position/"},
+                            {"name": "Rotations", "url": "/particles/core-layout/rotations/"},
+                            {"name": "Spacing", "url": "/particles/core-layout/spacing/"},
+                            {"name": "Widths", "url": "/particles/core-layout/widths/"},
+                            {"name": "Z-index", "url": "/particles/core-layout/z-index/"},
+                        ]
+        }
+    });
 
-<div>
-    <nav class="article clearfix">
-        <a class="previous" href="/blog/tags/core-layout/" title="Previous Page"><span class="title">Previous Page</span></a>
-            </nav>
-</div>
+    document.querySelector("h1").innerHTML = "core-layout";
+</script>
+
+                    </div>
+
+            </article>
         </main>
         <footer class="tc w-100 pv3 bg-wcag-primary flex-shrink-0">
     By <a href="https://www.frisovandijk.com" class="b no-underline hover-underline c-light">Friso van Dijk</a>

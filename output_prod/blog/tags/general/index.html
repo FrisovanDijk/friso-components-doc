@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head lang="en">
-        <title>Tag Archive "general" &mdash; Friso&#039;s Component API Documentation &mdash; </title>
+        <title>general &mdash; Friso&#039;s Component API Documentation &mdash; </title>
         <meta charset="utf-8">
         <meta name="theme-color" content="#ffffff">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,23 +29,33 @@
 </div>
 
         <main role="main" class="w-90 mw7 center flex-grow-1 mt6 mb12">
-            <h2>"general"</h2>
-        <h3>September 2019</h3>
-<article>
-  <div><a href="/general/architecture/">Architecture</a></div>
-</article>
-<article>
-  <div><a href="/general/documentation-guide/">Documentation guide</a></div>
-</article>
-<article>
-  <div><a href="/general/front-endjs/">Front-end JS</a></div>
-</article>
-<article>
-  <div><a href="/general/install and use/">Install and use</a></div>
-</article>
+                <article class="bg-grays-white br4 pa4 h-100 flex flex-column">
+        <header>
+            <h1>Tag list</h1>
+        </header>
+        <div class="flex-grow-1 mb5 overflow-y-auto">
+                            
+<div id="tags"></div>
+<script>
+    parseComponentHTML("#tags", {
+        "name": "tag-list",
+        "vars": {
+            "color": "secondary",
+            "tags": [
+                            {"name": "Architecture", "url": "/general/architecture/"},
+                            {"name": "Documentation guide", "url": "/general/documentation-guide/"},
+                            {"name": "Front-end JS", "url": "/general/front-endjs/"},
+                            {"name": "Install and use", "url": "/general/install and use/"},
+                        ]
+        }
+    });
 
-<div>
-</div>
+    document.querySelector("h1").innerHTML = "general";
+</script>
+
+                    </div>
+
+            </article>
         </main>
         <footer class="tc w-100 pv3 bg-wcag-primary flex-shrink-0">
     By <a href="https://www.frisovandijk.com" class="b no-underline hover-underline c-light">Friso van Dijk</a>

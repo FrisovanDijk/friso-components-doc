@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head lang="en">
-        <title>Tag Archive "atom" &mdash; Friso&#039;s Component API Documentation &mdash; </title>
+        <title>atom &mdash; Friso&#039;s Component API Documentation &mdash; </title>
         <meta charset="utf-8">
         <meta name="theme-color" content="#ffffff">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,20 +29,33 @@
 </div>
 
         <main role="main" class="w-90 mw7 center flex-grow-1 mt6 mb12">
-            <h2>"atom"</h2>
-        <h3>September 2019</h3>
-<article>
-  <div><a href="/atoms/button/">Button</a></div>
-</article>
-<article>
-  <div><a href="/atoms/tag/">Tag</a></div>
-</article>
-<article>
-  <div><a href="/atoms/wave/">Wave</a></div>
-</article>
+                <article class="bg-grays-white br4 pa4 h-100 flex flex-column">
+        <header>
+            <h1>Tag list</h1>
+        </header>
+        <div class="flex-grow-1 mb5 overflow-y-auto">
+                            
+<div id="tags"></div>
+<script>
+    parseComponentHTML("#tags", {
+        "name": "tag-list",
+        "vars": {
+            "color": "secondary",
+            "tags": [
+                            {"name": "todo Branded box shadow", "url": "/atoms/branded-box-shadow/"},
+                            {"name": "Button", "url": "/atoms/button/"},
+                            {"name": "Tag", "url": "/atoms/tag/"},
+                            {"name": "Wave", "url": "/atoms/wave/"},
+                        ]
+        }
+    });
 
-<div>
-</div>
+    document.querySelector("h1").innerHTML = "atom";
+</script>
+
+                    </div>
+
+            </article>
         </main>
         <footer class="tc w-100 pv3 bg-wcag-primary flex-shrink-0">
     By <a href="https://www.frisovandijk.com" class="b no-underline hover-underline c-light">Friso van Dijk</a>

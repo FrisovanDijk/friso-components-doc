@@ -3,13 +3,33 @@
     <title><![CDATA[Friso&#039;s Component API Documentation]]></title>
     <link href="/blog/tags/atom.xml" rel="self"/>
     <link href="/"/>
-    <updated>2019-09-07T23:52:58+02:00</updated>
+    <updated>2019-09-08T00:53:02+02:00</updated>
     <id>/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
+            <title type="html"><![CDATA[todo Branded box shadow]]></title>
+            <link href="/atoms/branded-box-shadow/"/>
+            <updated>2019-09-08T00:53:02+02:00</updated>
+            <id>/atoms/branded-box-shadow/</id>
+            <content type="html"><![CDATA[<style>
+    .shadow-branded {
+        box-shadow: 0 10px 0 -5px #bed000;
+    }
+</style>
+
+<div class="w-100 mv4 pb5">
+    <div class="w-90 w-80-ns center">
+        <div class="ba b-primary bw1 shadow-branded pa2 bg-grays-white">
+            <h2>Title</h2>
+            <p>Content</p>
+        </div>
+    </div>
+</div>]]></content>
+        </entry>
+            <entry>
             <title type="html"><![CDATA[Button]]></title>
             <link href="/atoms/button/"/>
-            <updated>2019-09-07T23:52:58+02:00</updated>
+            <updated>2019-09-08T00:53:02+02:00</updated>
             <id>/atoms/button/</id>
             <content type="html"><![CDATA[<div class="w-100 ph3 pv2">
     <button class="btn btn-primary">Default</button>
@@ -39,7 +59,7 @@
             <entry>
             <title type="html"><![CDATA[Tag]]></title>
             <link href="/atoms/tag/"/>
-            <updated>2019-09-07T23:52:58+02:00</updated>
+            <updated>2019-09-08T00:53:02+02:00</updated>
             <id>/atoms/tag/</id>
             <content type="html"><![CDATA[<div class="w-100 bg-grays-white flex flex-wrap">
     <div class="tag tag-secondary">tagged</div>
@@ -68,7 +88,7 @@
             <entry>
             <title type="html"><![CDATA[Wave]]></title>
             <link href="/atoms/wave/"/>
-            <updated>2019-09-07T23:52:58+02:00</updated>
+            <updated>2019-09-08T00:53:02+02:00</updated>
             <id>/atoms/wave/</id>
             <content type="html"><![CDATA[<div class="w-100 mv4 pb5 bg-grays-white">
     <div class="w-100 bg-primary pt4">

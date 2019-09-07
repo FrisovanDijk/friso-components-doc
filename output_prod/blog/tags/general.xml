@@ -3,13 +3,13 @@
     <title><![CDATA[Friso&#039;s Component API Documentation]]></title>
     <link href="/blog/tags/general.xml" rel="self"/>
     <link href="/"/>
-    <updated>2019-09-07T23:52:58+02:00</updated>
+    <updated>2019-09-08T00:53:02+02:00</updated>
     <id>/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Architecture]]></title>
             <link href="/general/architecture/"/>
-            <updated>2019-09-07T23:52:58+02:00</updated>
+            <updated>2019-09-08T00:53:02+02:00</updated>
             <id>/general/architecture/</id>
             <content type="html"><![CDATA[<section>
     <p>In this document we'll discuss the reasoning behind this API and the building blocks used in its design.</p>
@@ -112,7 +112,7 @@
             <entry>
             <title type="html"><![CDATA[Documentation guide]]></title>
             <link href="/general/documentation-guide/"/>
-            <updated>2019-09-07T23:52:58+02:00</updated>
+            <updated>2019-09-08T00:53:02+02:00</updated>
             <id>/general/documentation-guide/</id>
             <content type="html"><![CDATA[<p>This documentation follows a specific ordering of elements, as shown below. Each element
     is included as needed where things are not self-explanatory.</p>
@@ -156,7 +156,7 @@ Specific behaviour:
             <entry>
             <title type="html"><![CDATA[Front-end JS]]></title>
             <link href="/general/front-endjs/"/>
-            <updated>2019-09-07T23:52:58+02:00</updated>
+            <updated>2019-09-08T00:53:02+02:00</updated>
             <id>/general/front-endjs/</id>
             <content type="html"><![CDATA[<p>Component Javascript together with a lightweight javascript implementation to asynchronously render API components.</p>
 <p>The rendering implementation is not supported in IE, because it uses the ES6 fetch API.</p>
@@ -172,13 +172,13 @@ parseComponentHTMLChild(container_id, child_id, data)
 </code></pre>
 
 <p>Source:</p>
-<iframe src="https://component.frisovandijk.com/static/components.js" class="w-100 h5 br3 bg-grays-light4"></iframe>
+<iframe src="https://component.frisovandijk.com/api/static/components.js" class="w-100 h5 br3 bg-grays-light4"></iframe>
 ]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[Install and use]]></title>
             <link href="/general/install and use/"/>
-            <updated>2019-09-07T23:52:58+02:00</updated>
+            <updated>2019-09-08T00:53:02+02:00</updated>
             <id>/general/install and use/</id>
             <content type="html"><![CDATA[<section>
     <h2>Installing Friso's Component API</h2>
