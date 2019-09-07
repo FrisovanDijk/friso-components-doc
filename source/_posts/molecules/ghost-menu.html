@@ -1,0 +1,61 @@
+---
+layout: post
+title: Ghost menu
+tags:
+- molecule
+---
+
+<div class="mw6 ma1 center" id="ghost-menu1"></div>
+<script>
+    parseComponentHTML("#ghost-menu1", {
+        "name": "ghost-menu",
+        "vars": {
+            "items": [
+                {"name": "item", "url": "#"},
+                {"name": "item", "url": "#"},
+                {"name": "item", "url": "#"},
+                {"name": "item", "url": "#"},
+                {"name": "item", "url": "#"}
+            ]
+        }
+    });
+</script>
+<p>Colored & bordered:</p>
+<div class="mw6 ma1 center" id="ghost-menu2"></div>
+<script>
+    parseComponentHTML("#ghost-menu2", {
+        "name": "ghost-menu",
+        "vars": {
+            "color": "accent1",
+            "items": [
+                {"name": "item", "url": "#"},
+                {"name": "item", "url": "#"},
+                {"name": "item", "url": "#"},
+                {"name": "item", "url": "#"},
+                {"name": "item", "url": "#"}
+            ],
+            "border?": true
+        }
+    });
+</script>
+
+<p>Simple responsive ghost menu that fills its container.</p>
+
+<p>Example API call:</p>
+<pre><code>parseComponentHTML("#ghost-menu2", {
+    "name": "ghost-menu",
+    "vars": {
+    "color": "accent1",
+    "items": [
+    {"name": "item", "url": "#"},
+    {"name": "item", "url": "#"},
+    {"name": "item", "url": "#"},
+    {"name": "item", "url": "#"},
+    {"name": "item", "url": "#"}
+    ],
+    "border?": true
+    }
+    });
+</code></pre>
+<p>Code:</p>
+<iframe src="https://component.frisovandijk.com/source/molecules/breadcrumbs.mustache" class="w-100 h5 br3 bg-grays-light4"></iframe>

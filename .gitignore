@@ -1,0 +1,6 @@
+composer.phar
+/vendor/
+/output_dev/
+/docs/
+/.idea/
+app/config/sculpin_site_prod.yml

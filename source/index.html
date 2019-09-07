@@ -1,0 +1,60 @@
+---
+layout: default
+title: Home
+use:
+    - posts_tags
+---
+
+<h2>About the Component API</h2>
+<p>General information and useful links.</p>
+<table class="w-100 bg-grays-white br4 pa4">
+    <tr><td class="pa2 w4">General</td><td id="general" data-color="info"></td></tr>
+    <tr><td class="pa2 w4">Links</td><td id="link" data-color="warning"></td></tr>
+    <script>
+        parseComponentHTML("#link", {
+            "name": "tag-list",
+            "vars": {
+                "color": "accent1",
+                "tags": [
+                    {"name": "Tachyons", "url": "https://tachyons.io"},
+                    {"name": "Tailwind CSS", "url": "https://tailwindcss.com/"},
+                    {"name": "Atomic Design", "url": "http://bradfrost.com/blog/post/atomic-web-design/"},
+                    {"name": "Sculpin", "url": "https://sculpin.io"},
+                    {"name": "Grav CMS", "url": "https://getgrav.org/"}
+                ]
+            }
+        });
+    </script>
+</table>
+
+<h2>Core particles</h2>
+<table class="w-100 bg-grays-white br4 pa4">
+    <tr><td class="pa2 w3">Typography</td><td id="core-typography" data-color="secondary"></td></tr>
+    <tr><td class="pa2 w3">Layout</td><td id="core-layout" data-color="accent1"></td></tr>
+    <tr><td class="pa2 w3">Theming</td><td id="core-theming" data-color="accent2"></td></tr>
+    <tr><td class="pa2 w3">Utilities</td><td id="core-utility" data-color="accent3"></td></tr>
+</table>
+
+<h2>Atomic components</h2>
+<table class="w-100 bg-grays-white br4 pa4">
+    <tr><td class="pa2 w3">Particles</td><td id="particle" data-color="secondary"></td></tr>
+    <tr><td class="pa2 w3">Atoms</td><td id="atom" data-color="accent1"></td></tr>
+    <tr><td class="pa2 w3">Molecules</td><td id="molecule" data-color="accent2"></td></tr>
+</table>
+
+<script>
+    {% for tag,posts in data.posts_tags %}
+        var color = document.querySelector("#{{ tag }}").dataset.color;
+        parseComponentHTML("#{{ tag }}", {
+            "name": "tag-list",
+            "vars": {
+                "color": color,
+                "tags": [
+                    {% for item in posts|sort|reverse %}
+                        {"name": "{{ item.title }}", "url": "{{ item.url }}"},
+                    {% endfor %}
+                ]
+            }
+        });
+    {% endfor %}
+</script>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <title>Home &mdash; Friso&#039;s Component API Documentation &mdash; </title>
+        <meta charset="utf-8">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                    <meta name="robots" content="noindex, follow">
+                <link rel="stylesheet" href="https://component.frisovandijk.com/api/static/docs.css">
+        <script src="https://component.frisovandijk.com/api/static/components.js"></script>
+
+        <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="Friso&#039;s Component API Documentation activity feed" />
+                                    </head>
+    <body class="bg-grays-light4 min-vh-100 flex flex-column">
+        <div id="header" class="w-100 h3">
+    <header class="bg-wcag-primary h-100 flex items-center">
+        <div class="f6 mh3 f4-ns tc">Friso's Component API</div>
+        <nav class="h-100">
+            <ul class="flex items-center list-clear h-100 list ml3">
+                <a class="c-light ph2 no-underline hover-secondary hover-primary" href="/index.html">     <li>Home</li>   </a>
+                <a class="c-light ph2 no-underline hover-secondary hover-primary"
+                   href="https://www.frisovandijk.com"><li>Friso</li></a>
+                <a class="c-light ph2 no-underline hover-secondary hover-primary"
+                   href="https://github.com/FrisovanDijk/friso-components"><li>Github</li> </a>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+        <main role="main" class="w-90 mw7 center flex-grow-1 mt6 mb12">
+            <h2>About the Component API</h2>
+<p>General information and useful links.</p>
+<table class="w-100 bg-grays-white br4 pa4">
+    <tr><td class="pa2 w4">General</td><td id="general" data-color="info"></td></tr>
+    <tr><td class="pa2 w4">Links</td><td id="link" data-color="warning"></td></tr>
+    <script>
+        parseComponentHTML("#link", {
+            "name": "tag-list",
+            "vars": {
+                "color": "accent1",
+                "tags": [
+                    {"name": "Tachyons", "url": "https://tachyons.io"},
+                    {"name": "Tailwind CSS", "url": "https://tailwindcss.com/"},
+                    {"name": "Atomic Design", "url": "http://bradfrost.com/blog/post/atomic-web-design/"},
+                    {"name": "Sculpin", "url": "https://sculpin.io"},
+                    {"name": "Grav CMS", "url": "https://getgrav.org/"}
+                ]
+            }
+        });
+    </script>
+</table>
+
+<h2>Core particles</h2>
+<table class="w-100 bg-grays-white br4 pa4">
+    <tr><td class="pa2 w3">Typography</td><td id="core-typography" data-color="secondary"></td></tr>
+    <tr><td class="pa2 w3">Layout</td><td id="core-layout" data-color="accent1"></td></tr>
+    <tr><td class="pa2 w3">Theming</td><td id="core-theming" data-color="accent2"></td></tr>
+    <tr><td class="pa2 w3">Utilities</td><td id="core-utility" data-color="accent3"></td></tr>
+</table>
+
+<h2>Atomic components</h2>
+<table class="w-100 bg-grays-white br4 pa4">
+    <tr><td class="pa2 w3">Particles</td><td id="particle" data-color="secondary"></td></tr>
+    <tr><td class="pa2 w3">Atoms</td><td id="atom" data-color="accent1"></td></tr>
+    <tr><td class="pa2 w3">Molecules</td><td id="molecule" data-color="accent2"></td></tr>
+</table>
+
+<script>
+            var color = document.querySelector("#atom").dataset.color;
+        parseComponentHTML("#atom", {
+            "name": "tag-list",
+            "vars": {
+                "color": color,
+                "tags": [
+                                            {"name": "Button", "url": "/atoms/button/"},
+                                            {"name": "Tag", "url": "/atoms/tag/"},
+                                            {"name": "Wave", "url": "/atoms/wave/"},
+                                    ]
+            }
+        });
+            var color = document.querySelector("#general").dataset.color;
+        parseComponentHTML("#general", {
+            "name": "tag-list",
+            "vars": {
+                "color": color,
+                "tags": [
+                                            {"name": "Architecture", "url": "/general/architecture/"},
+                                            {"name": "Documentation guide", "url": "/general/documentation-guide/"},
+                                            {"name": "Front-end JS", "url": "/general/front-endjs/"},
+                                            {"name": "Install and use", "url": "/general/install and use/"},
+                                    ]
+            }
+        });
+            var color = document.querySelector("#molecule").dataset.color;
+        parseComponentHTML("#molecule", {
+            "name": "tag-list",
+            "vars": {
+                "color": color,
+                "tags": [
+                                            {"name": "Alert", "url": "/molecules/alert/"},
+                                            {"name": "Breadcrumbs", "url": "/molecules/breadcrumbs/"},
+                                            {"name": "Ghost menu", "url": "/molecules/ghost-menu/"},
+                                            {"name": "Tag list", "url": "/molecules/tag-list/"},
+                                    ]
+            }
+        });
+            var color = document.querySelector("#core-layout").dataset.color;
+        parseComponentHTML("#core-layout", {
+            "name": "tag-list",
+            "vars": {
+                "color": color,
+                "tags": [
+                                            {"name": "Box sizing", "url": "/particles/core-layout/box-sizing/"},
+                                            {"name": "Clearfix", "url": "/particles/core-layout/clearfix/"},
+                                            {"name": "Debug children", "url": "/particles/core-layout/debug-children/"},
+                                            {"name": "Debug grid", "url": "/particles/core-layout/debug-grid/"},
+                                            {"name": "Debug", "url": "/particles/core-layout/debug/"},
+                                            {"name": "Display", "url": "/particles/core-layout/display/"},
+                                            {"name": "Flexbox", "url": "/particles/core-layout/flexbox/"},
+                                            {"name": "Floats", "url": "/particles/core-layout/floats/"},
+                                            {"name": "Heights", "url": "/particles/core-layout/heights/"},
+                                            {"name": "Max widths", "url": "/particles/core-layout/max-widths/"},
+                                            {"name": "Overflow", "url": "/particles/core-layout/overflow/"},
+                                            {"name": "Position", "url": "/particles/core-layout/position/"},
+                                            {"name": "Rotations", "url": "/particles/core-layout/rotations/"},
+                                            {"name": "Spacing", "url": "/particles/core-layout/spacing/"},
+                                            {"name": "Widths", "url": "/particles/core-layout/widths/"},
+                                            {"name": "Z-index", "url": "/particles/core-layout/z-index/"},
+                                    ]
+            }
+        });
+            var color = document.querySelector("#core-theming").dataset.color;
+        parseComponentHTML("#core-theming", {
+            "name": "tag-list",
+            "vars": {
+                "color": color,
+                "tags": [
+                                            {"name": "Background size", "url": "/particles/core-theming/background-size/"},
+                                            {"name": "Border color", "url": "/particles/core-theming/border-color/"},
+                                            {"name": "Border hover", "url": "/particles/core-theming/border-hover/"},
+                                            {"name": "Border radius", "url": "/particles/core-theming/border-radius/"},
+                                            {"name": "Bordersstyle", "url": "/particles/core-theming/border-style/"},
+                                            {"name": "Border width", "url": "/particles/core-theming/border-width/"},
+                                            {"name": "Borders", "url": "/particles/core-theming/borders/"},
+                                            {"name": "Box shadow", "url": "/particles/core-theming/box-shadow/"},
+                                            {"name": "Colors", "url": "/particles/core-theming/colors/"},
+                                            {"name": "Hovers", "url": "/particles/core-theming/hovers/"},
+                                            {"name": "Opacity", "url": "/particles/core-theming/opacity/"},
+                                    ]
+            }
+        });
+            var color = document.querySelector("#core-typography").dataset.color;
+        parseComponentHTML("#core-typography", {
+            "name": "tag-list",
+            "vars": {
+                "color": color,
+                "tags": [
+                                            {"name": "Font families", "url": "/particles/core-typography/font-families/"},
+                                            {"name": "Font style", "url": "/particles/core-typography/font-style/"},
+                                            {"name": "Font weights", "url": "/particles/core-typography/font-weights/"},
+                                            {"name": "Letter spacing", "url": "/particles/core-typography/letter-spacing/"},
+                                            {"name": "Line height", "url": "/particles/core-typography/line-height/"},
+                                            {"name": "Lists", "url": "/particles/core-typography/lists/"},
+                                            {"name": "Text align", "url": "/particles/core-typography/text-align/"},
+                                            {"name": "Text decoration", "url": "/particles/core-typography/text-decoration/"},
+                                            {"name": "Text transform", "url": "/particles/core-typography/text-transform/"},
+                                            {"name": "Type scale", "url": "/particles/core-typography/type-scale/"},
+                                            {"name": "Typography", "url": "/particles/core-typography/typography/"},
+                                            {"name": "Vertical align", "url": "/particles/core-typography/vertical-align/"},
+                                            {"name": "Whitespace", "url": "/particles/core-typography/whitespace/"},
+                                    ]
+            }
+        });
+            var color = document.querySelector("#core-utility").dataset.color;
+        parseComponentHTML("#core-utility", {
+            "name": "tag-list",
+            "vars": {
+                "color": color,
+                "tags": [
+                                            {"name": "CSS helpers", "url": "/particles/core-utility/css-helpers/"},
+                                            {"name": "HTML Elements", "url": "/particles/core-utility/html-elements/"},
+                                            {"name": "Normalize", "url": "/particles/core-utility/normalize/"},
+                                            {"name": "SASS functions", "url": "/particles/core-utility/sass-functions/"},
+                                            {"name": "Tailwind preflight", "url": "/particles/core-utility/tailwind-preflight/"},
+                                            {"name": "Variables", "url": "/particles/core-utility/variables/"},
+                                    ]
+            }
+        });
+            var color = document.querySelector("#particle").dataset.color;
+        parseComponentHTML("#particle", {
+            "name": "tag-list",
+            "vars": {
+                "color": color,
+                "tags": [
+                                            {"name": "Simple pop", "url": "/particles/js-simple-pop/"},
+                                    ]
+            }
+        });
+    </script>        </main>
+        <footer class="tc w-100 pv3 bg-wcag-primary flex-shrink-0">
+    By <a href="https://www.frisovandijk.com" class="b no-underline hover-underline c-light">Friso van Dijk</a>
+</footer>
+                
+                    </body>
+</html>

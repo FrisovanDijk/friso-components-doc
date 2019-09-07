@@ -1,0 +1,41 @@
+{% extends "default" %}
+
+{% block head_meta %}
+    <meta name="robots" content="index, follow">
+{% endblock %}
+
+{% block content_wrapper %}
+    <article class="bg-grays-white br4 pa4 h-100 flex flex-column">
+        <header>
+            <h1>{{ page.title }}</h1>
+        </header>
+        <div class="flex-grow-1 mb5 overflow-y-auto">
+            {% block post_content %}
+                {{ page.blocks.content|raw }}
+            {% endblock %}
+        </div>
+
+        {% if page.previous_post or page.next_post %}
+            <div class="pa2 flex">
+                <div class="self-start">
+                    {% if page.next_post %}
+                        Previous: <a class="tag tag-accent1" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}">{{ page.next_post.title }}</a>
+                    {% endif %}
+                </div>
+                {% if page.tags %}
+                <div class="center">
+                    In:
+                    {% for tag in page.tags %}
+                        <a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}" class="tag tag-secondary">{{ tag }}</a>{% if not loop.last %}{% endif %}
+                    {% endfor %}
+                </div>
+                {% endif %}
+                <div class="self-end">
+                    {% if page.previous_post %}
+                        Next: <a class="tag tag-accent1" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}">{{ page.previous_post.title }}</a>
+                    {% endif %}
+                </div>
+            </div>
+        {% endif %}
+    </article>
+{% endblock %}

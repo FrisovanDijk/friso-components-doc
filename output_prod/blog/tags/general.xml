@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[Friso&#039;s Component API Documentation]]></title>
+    <link href="/blog/tags/general.xml" rel="self"/>
+    <link href="/"/>
+    <updated>2019-09-07T23:48:53+02:00</updated>
+    <id>/</id>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Architecture]]></title>
+            <link href="/general/architecture/"/>
+            <updated>2019-09-07T23:48:53+02:00</updated>
+            <id>/general/architecture/</id>
+            <content type="html"><![CDATA[<section>
+    <p>In this document we'll discuss the reasoning behind this API and the building blocks used in its design.</p>
+    <h2>The small component</h2>
+    <p>There has been a shift in the componentisation of UIs. Style guides with documentation on small components
+        has become more common and UI frameworks such as Bootstrap are extremely popular. And it makes sense - each
+        UI is nothing more than a set of components. Some are specific to a design, but most are interchangable with
+        just a new lick of paint.</p>
+    <p>But changing those licks of paint can be a painful process. Taking Bootstrap as an example, say we wanted to
+        change the scale of our border-radius. Make everything a bit rounder and smoother in the next iteration of
+        our design.</p>
+    <p>Bootstrap has 58 occurrences of <code>border-radius</code> in their code, out of which 52 - or 90% if you
+        wish - provide 6 properties: <code>0, 0.2rem, 0.25rem, 0.3rem, 1rem, 50%</code>. Declaring multiple,
+        single-purpose CSS classes would help reduce complexity. Take the class <code>.br0</code> for example.
+        3 letters that stand for <code>border-radius: 0</code>. Clear and concise.</p>
+    <p>But it's not just that. File sizes are reduced too. Having <code>border-radius:;</code> in your code 58
+        times is 870 characters, compared to 150 when using generic classes. That's 870 characters not included
+        in the file every visitor of your website <em>only for border-radius!</em></p>
+    <p>And that's where <a href="http://tachyons.io/" target="_blank">Tachyons</a> comes in. It breaks down CSS in those
+        elementary particles. This shifts the complexity from CSS to our HTML, which is what we'd want eventually.
+        We want to declare components and understand what they do in just a glance. Compare the class declarations
+        for a container: <code>container</code> and <code>w-100 mw-60 flex flex-column</code>. The latter is
+        understandable right away, as you don't need to read the CSS declarations to see what it does.</p>
+    <p>But what if you want to reuse more complex components with multiple attributes? That's a lot of extra class
+        decorations! To answer that, we first need to touch on the idea of Atomic Design.</p>
+</section>
+<section>
+    <h2>Atomic Design</h2>
+    <p>Atomic Design centers around the decomposition of elements to their smallest usable state. A quick overview
+        of the Atomic Design pattern:Atomic Design centers around the decomposition of elements to their smallest
+        usable state. A quick overview of the Atomic Design pattern:</p>
+    <p class="tc"><img src="/assets/atomic-design.jpg" alt="atomic design visualised" class="w-100"></p>
+    <p><strong>Atoms.</strong> Atoms are the smallest building blocks. They are the HTML tags with its styling, the image, the button.
+        Atoms can also be abstract small components like a color palette or an animation. They are small in size and purpose.</p>
+    <p><strong>Molecules.</strong> Putting together several atoms gives you a more complex structure. They are small collections of atoms
+        that can be reused and serve a single purpose.</p>
+    <p><strong>Organisms.</strong> Molecules and atoms come together in more complex forms like organisms. It's a distinct section of a
+        final interface.</p>
+    <p><strong>Templates.</strong> Combining smaller components into a concrete template gives your the entire layout.</p>
+    <p><strong>Pages.</strong> A page is a specific instance of a template.</p>
+    <p>Atoms, molecules all originate from the component API. Organisms generally live in the project itself, as they are bespoke
+        implementations with these core components.</p>
+    <p>In this implementation I took it one step further by adding Tachyons to this system as <strong>Particles.</strong> Particles
+        are the small components that make up atoms.</p>
+    <p>This component API is a flavoured implementation of this design pattern and these terms are used throughout.</p>
+</section>
+<section>
+    <h2>What the API does</h2>
+    <p>The API and the Documentation on top of it serve as a living Style Guide. Everything is readable from the Documentation,
+        components are visible and changes are visible on reload. These components can be called from the API, either through
+        including the served CSS or by sending a GET request for molecules and organisms.</p>
+    <p>Within the API there is a clear distinction between each part of the Atomic Design system. The Core Particles are meant
+        to be used in every project, as all components are made up of them.</p>
+    <p>The Atomic Components are extactly that. The difference between core particle and the particles in this list is that the
+        latter is meant for non-core particles, for example a specific javascript hover animation. The core particles are CSS only.</p>
+    <p>Atoms can be further specified with CSS classes. If you have a button with the classes <code>w4 h2 bg-wcag-primary bw0 br2
+        hover-bg-primary-light2</code>, maintaining it can become a pain. Alternatively, we can create a class
+        <code>.btn { @extend .., .. }</code>. Now we can manage all our button styles in one place again, while keeping the
+        integrity of our componentised approach.</p>
+    <p>Molecules can also be further specified in CSS to avoid cluttering the Core CSS. One example I encountered is a negative margin
+        on an absolute element when you hover over it. Yes, you can create generic classes like <code>.hover-nmt2</code>, or we can
+        create the particle <code>.foo:hover { @extend .nt2 }</code>. Now we have our hover on foo unique to our molecule, without
+        extending our core.</p>
+    <p>When you get to organisms and later templates, all generic behaviours should already be defined. There will be a mix of generic
+        and project-specific components which get combined into a full layout.</p>
+    <p>All that's needed now is to call the API with your data and retreive the filled components. The GET request works like this:
+        <code>api-location/?name=component-name/vars=base64-encoded-JSON</code>. </p>
+</section>
+<section>
+    <h2>Reduced complexity</h2>
+    <p>So how does a component API reduce complexity? It's yet another system to manage, but one that fits into todays
+        API-driven development. You get your data from an API, be it a headless CMS or a database wrapper or whatever you use.
+        Why not take the same approach with your components?</p>
+    <p>Grab data from an API, apply your business logic and put that data in a component API call. The idea is really simple.
+        The reduced complexity in the projects you work on make them easier to handle, and good documentation is easy to do.</p>
+    <p><img class="center" src="/assets/architecture.jpg" alt="architecture view"></p>
+    <p>The application architecture above shows a simple app that consumes the Component API. The documentation is a living document
+        to reference and keep up-to-date. This scales well with multiple apps in a microservice architecture.</p>
+</section>
+<section>
+    <h2>The DRY front-end</h2>
+    <p>Writing a lot of code over an over is never fun. With a Component API, you can realise reusability in a straight-
+        forward manner. No more copying, refactoring and breaking things. Always have your most up-to-date front-end code
+        readily available.</p>
+    <p>My experience has been positive so far, and I'm having fun building and extending the system. </p>
+</section>
+<section>
+    <h2>Inspiration</h2>
+    <p>Credit where it's due: The Lonely Planet's <a href="https://rizzo.lonelyplanet.com/styleguide/"target="_blank">Rizzo</a>.
+        Their implementation of a maintainable style guide resonated with me and it couples well with the principles of
+        <a href="http://bradfrost.com/blog/post/atomic-web-design/" target="_blank">Atomic Design</a>. UI components are the building blocks
+        for the larger components of templates. With good baseline CSS, like <a href="http://tachyons.io/" target="_blank">Tachyons</a>,
+        you get a maintainable and componentised style guide.</p>
+    <p>My own implementation uses Mustache as a templating engine, because it's infinitely portable. Since the API itself
+        is just a set of logic-lesss <a href="https://mustache.github.io/" target="_blank">Mustache</a> templates and a single file, it has
+        little complexity of itself. Add to that static docs that grabs uncached components and you're good to go. Developing
+        in the docs itself is easy and is your documentation to boot.</p>
+</section>]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Documentation guide]]></title>
+            <link href="/general/documentation-guide/"/>
+            <updated>2019-09-07T23:48:53+02:00</updated>
+            <id>/general/documentation-guide/</id>
+            <content type="html"><![CDATA[<p>This documentation follows a specific ordering of elements, as shown below. Each element
+    is included as needed where things are not self-explanatory.</p>
+<p>So long as this pattern is followed, element naming won't matter.</p>
+<h2>Order</h2>
+<ul>
+    <li>Rendered component</li>
+    <li>Modifier example</li>
+    <li>Behaviour example</li>
+    <li>Explaining text</li>
+    <li>Selectors added</li>
+    <li>Behaviour added</li>
+    <li>JS function(s) added</li>
+    <li>Required components</li>
+    <li>Example code</li>
+    <li>Source code</li>
+</ul>
+<h2>Example</h2>
+<div class="w-90 mw5 center mv3 ph4 pv2 bg-wcag-secondary">A coloured div</div>
+Modifier style:
+<div class="w-90 mw5 center mv3 ph4 pv2 bg-transparent ba b-secondary bw2">In bordered format</div>
+Specific behaviour:
+<div class="w-90 mw5 center mv3 ph4 pv2 bg-transparent ba b-secondary bw2 grow">That can grow on hover</div>
+
+<p>I come in many colors.</p>
+
+<p>Selectors added:</p>
+<pre><code>css classes added</code></pre>
+<p>Behaviour added:</p>
+<pre><code>css modifiers (like :hover) and/or javascript functions</code></pre>
+
+<p>Source code (always up-to-date with an iframe):</p>
+<pre><code>&lt;iframe src=&quot;raw file location&quot; class=&quot;w-100 h5 br3 bg-grays-light4&quot;&gt;&lt;/iframe&gt;</code></pre>
+
+<h2>Exceptions on this pattern</h2>
+<ul>
+    <li>Colors</li>
+</ul>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Front-end JS]]></title>
+            <link href="/general/front-endjs/"/>
+            <updated>2019-09-07T23:48:53+02:00</updated>
+            <id>/general/front-endjs/</id>
+            <content type="html"><![CDATA[<p>Component Javascript together with a lightweight javascript implementation to asynchronously render API components.</p>
+<p>The rendering implementation is not supported in IE, because it uses the ES6 fetch API.</p>
+<p>Functions:</p>
+<pre><code>Grab the component from the API
+getComponent(component name, data)
+
+Makes the API call and parses the fulfilled promise HTML without further processing
+parseComponentHTML(id, data)
+
+Parse component as HTML child with a provided child_id
+parseComponentHTMLChild(container_id, child_id, data)
+</code></pre>
+
+<p>Source:</p>
+<iframe src="https://component.frisovandijk.com/static/components.js" class="w-100 h5 br3 bg-grays-light4"></iframe>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Install and use]]></title>
+            <link href="/general/install and use/"/>
+            <updated>2019-09-07T23:48:53+02:00</updated>
+            <id>/general/install and use/</id>
+            <content type="html"><![CDATA[<section>
+    <h2>Installing Friso's Component API</h2>
+    <p>Get it from <a href="https://github.com/FrisovanDijk/friso-components" target="_blank">Github</a> and run <code>composer install</code></p>
+    <p>Upload the code to a PHP server and that's it.</p>
+    <h3>Configuration</h3>
+    <p>On line 2 of index.php you can change the origin domains that can access the API. The default is any domain.</p>
+    <p><pre><code>header("Access-Control-Allow-Origin: *");</code></pre></p>
+    <p>You may want to limit access on a private API if the URL is exposed through a front-end implementation.</p>
+    <p>Alternatively you can extend it with API keys or some other access control system.</p>
+</section>
+<section>
+    <h2>Using the Component API</h2>
+    <p>Compiled stylesheets and javascript live in the static folder. Add your own styling or variables to the build by changing these.</p>
+    <p>For a full breakdown of the design, visit <a href="/general/architecture/" class="tag tag-info no-underline">Architecture</a></p>
+    <p>In short:</p>
+    <ul>
+        <li>Add new components to the corresponding component folder: particles, atoms or molecules.</li>
+        <li>Organisms and templates live in specific projects, but you can extend the API if so desired.</li>
+        <li>Add only components that will be reused and need to be maintained.</li>
+        <li>Components are Mustache templates, javascript or CSS.</li>
+        <li>Added CSS components must be added to the folder's build SASS file.</li>
+        <li>Added Mustache components must be added to the allowed API calls in index.php<br/>(<code>static $components</code>)</li>
+        <li>Javascript components need to be added to the relevant libraries in the static folder.</li>
+    </ul>
+    <h3>Front-end implementation</h3>
+    <p>Load the compiled stylesheet and javascript of your choice from the static folder of your API.</p>
+    <p>Create your first component:</p>
+    <div id="hello-world"></div>
+    <script>
+        parseComponentHTML("#hello-world", {
+            "name": "alert",
+            "vars": {
+                "type": "info",
+                "message": "Hello world!"
+            }
+        })
+    </script>
+<pre><code>&lt;div id=&quot;hello-world&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+    parseComponentHTML(&quot;#hello-world&quot;, {
+        &quot;name&quot;: &quot;alert&quot;,
+        &quot;vars&quot;: {
+            &quot;type&quot;: &quot;info&quot;,
+            &quot;message&quot;: &quot;Hello world!&quot;
+        }
+    })
+&lt;/script&gt;
+</code></pre>
+<p>Read the docs.</p>
+</section>
+
+<section>
+    <h2>Style guide documentation</h2>
+    <p>You are free to implement a documentation website however you wish.</p>
+    <p>If you want to get started with the current website as a template, you can find it on
+        <a href="https://github.com/FrisovanDijk/friso-components-doc" target="_blank">Github</a>.</p>
+    <p>This documentation is built with <a href="https://sculpin.io" target="_blank">Sculpin</a> as a static site generator.
+        Run <code>composer install</code> if you want to use Sculpin. The files are in source.</p>
+    <p>Alternatively you can find the generated static site in output_prod.</p>
+</section>
+]]></content>
+        </entry>
+    </feed>

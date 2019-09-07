@@ -1,0 +1,22 @@
+---
+layout: post
+title: Front-end JS
+tags:
+
+- general
+---
+<p>Component Javascript together with a lightweight javascript implementation to asynchronously render API components.</p>
+<p>The rendering implementation is not supported in IE, because it uses the ES6 fetch API.</p>
+<p>Functions:</p>
+<pre><code>Grab the component from the API
+getComponent(component name, data)
+
+Makes the API call and parses the fulfilled promise HTML without further processing
+parseComponentHTML(id, data)
+
+Parse component as HTML child with a provided child_id
+parseComponentHTMLChild(container_id, child_id, data)
+</code></pre>
+
+<p>Source:</p>
+<iframe src="https://component.frisovandijk.com/static/components.js" class="w-100 h5 br3 bg-grays-light4"></iframe>

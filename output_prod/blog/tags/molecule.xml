@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[Friso&#039;s Component API Documentation]]></title>
+    <link href="/blog/tags/molecule.xml" rel="self"/>
+    <link href="/"/>
+    <updated>2019-09-07T23:48:53+02:00</updated>
+    <id>/</id>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Alert]]></title>
+            <link href="/molecules/alert/"/>
+            <updated>2019-09-07T23:48:53+02:00</updated>
+            <id>/molecules/alert/</id>
+            <content type="html"><![CDATA[<div id="myalert"></div>
+<script>
+    parseComponentHTML("#myalert", {
+        "name": "alert",
+        "vars": {
+            "type": "info",
+            "message": "This is an alert"
+        }
+    });
+</script>
+
+<p>An alert message box that fills a container.</p>
+<p>The alert type can be any [color] or [color]-[tone] required.</p>
+<p>Example for a fixed container with the JS Modal particle:</p>
+<p><button class="btn btn-primary w4" onclick='simple_pop("#alert-container", {
+                "name": "alert",
+                "vars": {
+                    "type": "success",
+                    "message": "You have opened an alert!"
+                }
+            })'>Open alert</button></p>
+
+<p>Example API call:</p>
+<pre><code>parseComponentHTML("#myalert", {
+    "name": "alert",
+    "vars": {
+        "type": "info",
+        "message": "This is an alert"
+    }
+});
+</code></pre>
+<p>Code:</p>
+<iframe src="https://component.frisovandijk.com/source/molecules/alert.mustache" class="w-100 h5 br3 bg-grays-light4"></iframe>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Breadcrumbs]]></title>
+            <link href="/molecules/breadcrumbs/"/>
+            <updated>2019-09-07T23:48:53+02:00</updated>
+            <id>/molecules/breadcrumbs/</id>
+            <content type="html"><![CDATA[<div class="mv3" id="breadcrumbs"></div>
+<script>
+    parseComponentHTML("#breadcrumbs", {
+        "name": "breadcrumbs",
+        "vars": {
+            "items": [
+                {"name": "molecule", "url": "/blog/tags/molecule"},
+                {"name": "Breadcrumbs", "current?": true}
+            ]
+        }
+    });
+</script>
+
+<p>Breadcrumbs for accessible page navigation.</p>
+<p>Example API call:</p>
+<pre><code>parseComponentHTML("#breadcrumbs", {
+    "name": "breadcrumbs",
+    "vars": {
+        "items": [
+            {"name": "molecule", "url": "/blog/tags/molecule"},
+            {"name": "Breadcrumbs", "current?": true}
+        ]
+    }
+});
+</code></pre>
+
+<p>Code:</p>
+<iframe src="https://component.frisovandijk.com/source/molecules/breadcrumbs.mustache" class="w-100 h5 br3 bg-grays-light4"></iframe>]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Ghost menu]]></title>
+            <link href="/molecules/ghost-menu/"/>
+            <updated>2019-09-07T23:48:53+02:00</updated>
+            <id>/molecules/ghost-menu/</id>
+            <content type="html"><![CDATA[<div class="mw6 ma1 center" id="ghost-menu1"></div>
+<script>
+    parseComponentHTML("#ghost-menu1", {
+        "name": "ghost-menu",
+        "vars": {
+            "items": [
+                {"name": "item", "url": "#"},
+                {"name": "item", "url": "#"},
+                {"name": "item", "url": "#"},
+                {"name": "item", "url": "#"},
+                {"name": "item", "url": "#"}
+            ]
+        }
+    });
+</script>
+<p>Colored & bordered:</p>
+<div class="mw6 ma1 center" id="ghost-menu2"></div>
+<script>
+    parseComponentHTML("#ghost-menu2", {
+        "name": "ghost-menu",
+        "vars": {
+            "color": "accent1",
+            "items": [
+                {"name": "item", "url": "#"},
+                {"name": "item", "url": "#"},
+                {"name": "item", "url": "#"},
+                {"name": "item", "url": "#"},
+                {"name": "item", "url": "#"}
+            ],
+            "border?": true
+        }
+    });
+</script>
+
+<p>Simple responsive ghost menu that fills its container.</p>
+
+<p>Example API call:</p>
+<pre><code>parseComponentHTML("#ghost-menu2", {
+    "name": "ghost-menu",
+    "vars": {
+    "color": "accent1",
+    "items": [
+    {"name": "item", "url": "#"},
+    {"name": "item", "url": "#"},
+    {"name": "item", "url": "#"},
+    {"name": "item", "url": "#"},
+    {"name": "item", "url": "#"}
+    ],
+    "border?": true
+    }
+    });
+</code></pre>
+<p>Code:</p>
+<iframe src="https://component.frisovandijk.com/source/molecules/breadcrumbs.mustache" class="w-100 h5 br3 bg-grays-light4"></iframe>]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Tag list]]></title>
+            <link href="/molecules/tag-list/"/>
+            <updated>2019-09-07T23:48:53+02:00</updated>
+            <id>/molecules/tag-list/</id>
+            <content type="html"><![CDATA[<div class="mw6 ma1 center" id="tag-list"></div>
+<script>
+    parseComponentHTML("#tag-list", {
+        "name": "tag-list",
+        "vars": {
+            "tags": [
+                {"name": "Tag 1"},
+                {"name": "Tag 2"},
+                {"name": "Tag 3"},
+                {"name": "Tag 4"}
+            ]
+        }
+    });
+</script>
+<p>Linked tag list with title and color variation:</p>
+<div class="mw6 ma1 center" id="tag-list2"></div>
+<script>
+    parseComponentHTML("#tag-list2", {
+        "name": "tag-list",
+        "vars": {
+            "title": "Tag list",
+            "color": "accent3",
+            "tags": [
+                {"name": "Tag 1", "url": "#"},
+                {"name": "Tag 2", "url": "#"},
+                {"name": "Tag 3", "url": "#"},
+                {"name": "Tag 4", "url": "#"}
+            ]
+        }
+    });
+</script>
+
+<p>A list of tags.</p>
+
+<p>Example API call:</p>
+<pre><code>parseComponentHTML("#tag-list2", {
+    "name": "tag-list",
+    "vars": {
+        "title": "Tag list",
+        "color": "accent3",
+        "tags": [
+            {"name": "Tag 1", "url": "#"},
+            {"name": "Tag 2", "url": "#"},
+            {"name": "Tag 3", "url": "#"},
+            {"name": "Tag 4", "url": "#"}
+        ]
+    }
+});
+</code></pre>
+<p>Code:</p>
+<iframe src="https://component.frisovandijk.com/source/molecules/tag-list.mustache" class="w-100 h5 br3 bg-grays-light4"></iframe>]]></content>
+        </entry>
+    </feed>

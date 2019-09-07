@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[Friso&#039;s Component API Documentation]]></title>
+    <link href="/blog/tags/core-typography.xml" rel="self"/>
+    <link href="/"/>
+    <updated>2019-09-07T23:48:53+02:00</updated>
+    <id>/</id>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Font families]]></title>
+            <link href="/particles/core-typography/font-families/"/>
+            <updated>2019-09-07T23:48:53+02:00</updated>
+            <id>/particles/core-typography/font-families/</id>
+            <content type="html"><![CDATA[https://component.frisovandijk.com/source/css/core/typography/_font-families.scss]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Font style]]></title>
+            <link href="/particles/core-typography/font-style/"/>
+            <updated>2019-09-07T23:48:53+02:00</updated>
+            <id>/particles/core-typography/font-style/</id>
+            <content type="html"><![CDATA[https://component.frisovandijk.com/source/css/core/typography/_font-style.scss]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Font weights]]></title>
+            <link href="/particles/core-typography/font-weights/"/>
+            <updated>2019-09-07T23:48:53+02:00</updated>
+            <id>/particles/core-typography/font-weights/</id>
+            <content type="html"><![CDATA[https://component.frisovandijk.com/source/css/core/typography/_font-weights.scss]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Letter spacing]]></title>
+            <link href="/particles/core-typography/letter-spacing/"/>
+            <updated>2019-09-07T23:48:53+02:00</updated>
+            <id>/particles/core-typography/letter-spacing/</id>
+            <content type="html"><![CDATA[https://component.frisovandijk.com/source/css/core/typography/_letter-spacing.scss]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Line height]]></title>
+            <link href="/particles/core-typography/line-height/"/>
+            <updated>2019-09-07T23:48:53+02:00</updated>
+            <id>/particles/core-typography/line-height/</id>
+            <content type="html"><![CDATA[https://component.frisovandijk.com/source/css/core/typography/_line-height.scss]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Lists]]></title>
+            <link href="/particles/core-typography/lists/"/>
+            <updated>2019-09-07T23:48:53+02:00</updated>
+            <id>/particles/core-typography/lists/</id>
+            <content type="html"><![CDATA[https://component.frisovandijk.com/source/css/core/typography/_lists.scss]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Text align]]></title>
+            <link href="/particles/core-typography/text-align/"/>
+            <updated>2019-09-07T23:48:53+02:00</updated>
+            <id>/particles/core-typography/text-align/</id>
+            <content type="html"><![CDATA[https://component.frisovandijk.com/source/css/core/typography/_text-align.scss]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Text decoration]]></title>
+            <link href="/particles/core-typography/text-decoration/"/>
+            <updated>2019-09-07T23:48:53+02:00</updated>
+            <id>/particles/core-typography/text-decoration/</id>
+            <content type="html"><![CDATA[https://component.frisovandijk.com/source/css/core/typography/_text-decoration.scss]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Text transform]]></title>
+            <link href="/particles/core-typography/text-transform/"/>
+            <updated>2019-09-07T23:48:53+02:00</updated>
+            <id>/particles/core-typography/text-transform/</id>
+            <content type="html"><![CDATA[https://component.frisovandijk.com/source/css/core/typography/_text-transform.scss]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Type scale]]></title>
+            <link href="/particles/core-typography/type-scale/"/>
+            <updated>2019-09-07T23:48:53+02:00</updated>
+            <id>/particles/core-typography/type-scale/</id>
+            <content type="html"><![CDATA[https://component.frisovandijk.com/source/css/core/typography/_type-scale.scss]]></content>
+        </entry>
+    </feed>

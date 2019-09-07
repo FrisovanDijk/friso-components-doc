@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <title>Tag list &mdash; Friso&#039;s Component API Documentation &mdash; </title>
+        <meta charset="utf-8">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <meta name="robots" content="index, follow">
+        <link rel="stylesheet" href="https://component.frisovandijk.com/api/static/docs.css">
+        <script src="https://component.frisovandijk.com/api/static/components.js"></script>
+
+        <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="Friso&#039;s Component API Documentation activity feed" />
+                                    </head>
+    <body class="bg-grays-light4 min-vh-100 flex flex-column">
+        <div id="header" class="w-100 h3">
+    <header class="bg-wcag-primary h-100 flex items-center">
+        <div class="f6 mh3 f4-ns tc">Friso's Component API</div>
+        <nav class="h-100">
+            <ul class="flex items-center list-clear h-100 list ml3">
+                <a class="c-light ph2 no-underline hover-secondary hover-primary" href="/index.html">     <li>Home</li>   </a>
+                <a class="c-light ph2 no-underline hover-secondary hover-primary"
+                   href="https://www.frisovandijk.com"><li>Friso</li></a>
+                <a class="c-light ph2 no-underline hover-secondary hover-primary"
+                   href="https://github.com/FrisovanDijk/friso-components"><li>Github</li> </a>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+        <main role="main" class="w-90 mw7 center flex-grow-1 mt6 mb12">
+                <article class="bg-grays-white br4 pa4 h-100 flex flex-column">
+        <header>
+            <h1>Tag list</h1>
+        </header>
+        <div class="flex-grow-1 mb5 overflow-y-auto">
+                            <div class="mw6 ma1 center" id="tag-list"></div>
+<script>
+    parseComponentHTML("#tag-list", {
+        "name": "tag-list",
+        "vars": {
+            "tags": [
+                {"name": "Tag 1"},
+                {"name": "Tag 2"},
+                {"name": "Tag 3"},
+                {"name": "Tag 4"}
+            ]
+        }
+    });
+</script>
+<p>Linked tag list with title and color variation:</p>
+<div class="mw6 ma1 center" id="tag-list2"></div>
+<script>
+    parseComponentHTML("#tag-list2", {
+        "name": "tag-list",
+        "vars": {
+            "title": "Tag list",
+            "color": "accent3",
+            "tags": [
+                {"name": "Tag 1", "url": "#"},
+                {"name": "Tag 2", "url": "#"},
+                {"name": "Tag 3", "url": "#"},
+                {"name": "Tag 4", "url": "#"}
+            ]
+        }
+    });
+</script>
+
+<p>A list of tags.</p>
+
+<p>Example API call:</p>
+<pre><code>parseComponentHTML("#tag-list2", {
+    "name": "tag-list",
+    "vars": {
+        "title": "Tag list",
+        "color": "accent3",
+        "tags": [
+            {"name": "Tag 1", "url": "#"},
+            {"name": "Tag 2", "url": "#"},
+            {"name": "Tag 3", "url": "#"},
+            {"name": "Tag 4", "url": "#"}
+        ]
+    }
+});
+</code></pre>
+<p>Code:</p>
+<iframe src="https://component.frisovandijk.com/source/molecules/tag-list.mustache" class="w-100 h5 br3 bg-grays-light4"></iframe>
+                    </div>
+
+                    <div class="pa2 flex">
+                <div class="self-start">
+                                            Previous: <a class="tag tag-accent1" href="/molecules/ghost-menu/" title="Ghost menu">Ghost menu</a>
+                                    </div>
+                                <div class="center">
+                    In:
+                                            <a href="/blog/tags/molecule" class="tag tag-secondary">molecule</a>                                    </div>
+                                <div class="self-end">
+                                            Next: <a class="tag tag-accent1" href="/particles/core-layout/box-sizing/" title="Box sizing">Box sizing</a>
+                                    </div>
+            </div>
+            </article>
+        </main>
+        <footer class="tc w-100 pv3 bg-wcag-primary flex-shrink-0">
+    By <a href="https://www.frisovandijk.com" class="b no-underline hover-underline c-light">Friso van Dijk</a>
+</footer>
+                
+                    </body>
+</html>

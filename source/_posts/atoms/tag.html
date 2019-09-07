@@ -1,0 +1,30 @@
+---
+layout: post
+title: Tag
+tags:
+- atom
+---
+
+<div class="w-100 bg-grays-white flex flex-wrap">
+    <div class="tag tag-secondary">tagged</div>
+    <div class="tag tag-accent1">tagged</div>
+    <div class="tag tag-accent2">tagged</div>
+    <div class="tag tag-accent3">tagged</div>
+</div>
+<p>Hovers:</p>
+<div class="w-100 bg-grays-white flex flex-wrap">
+    <a href="#"><div class="tag tag-secondary">tagged</div></a>
+    <a href="#"><div class="tag tag-accent1">tagged</div></a>
+    <a href="#"><div class="tag tag-accent2">tagged</div></a>
+    <a href="#"><div class="tag tag-accent3">tagged</div></a>
+</div>
+
+<p>Creates small styled tags.</p>
+<p>All colors with a <em>light</em> or <em>light4</em> variant are used to generate tag styles.</p>
+<p>Tags embedded in a link element get a hover color, which is the <em>base</em> or <em>light2</em> variant respectively.</p>
+<p>Selectors added:</p>
+<pre><code>.tag, .tag-[color]</code></pre>
+<p>Behaviour added:</p>
+<pre><code>a>.tag-[color]:hover, a.tag-[color]:hover</code></pre>
+<p>Tag code:</p>
+<iframe src="https://component.frisovandijk.com/source/atoms/_tag.scss" class="w-100 h5 br3 bg-grays-light4"></iframe>

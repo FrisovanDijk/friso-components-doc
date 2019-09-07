@@ -1,0 +1,46 @@
+---
+layout: post
+title: Alert
+tags:
+- molecule
+---
+
+{% block content %}
+<div id="myalert"></div>
+<script>
+    parseComponentHTML("#myalert", {
+        "name": "alert",
+        "vars": {
+            "type": "info",
+            "message": "This is an alert"
+        }
+    });
+</script>
+
+<p>An alert message box that fills a container.</p>
+<p>The alert type can be any [color] or [color]-[tone] required.</p>
+<p>Example for a fixed container with the JS Modal particle:</p>
+<p><button class="btn btn-primary w4" onclick='simple_pop("#alert-container", {
+                "name": "alert",
+                "vars": {
+                    "type": "success",
+                    "message": "You have opened an alert!"
+                }
+            })'>Open alert</button></p>
+
+<p>Example API call:</p>
+<pre><code>parseComponentHTML("#myalert", {
+    "name": "alert",
+    "vars": {
+        "type": "info",
+        "message": "This is an alert"
+    }
+});
+</code></pre>
+<p>Code:</p>
+<iframe src="https://component.frisovandijk.com/source/molecules/alert.mustache" class="w-100 h5 br3 bg-grays-light4"></iframe>
+{% endblock %}
+
+{% block scripts %}
+<div id="alert-container" class="fixed top-0 w-90 w-50-ns mt3 center-fixed"></div>
+{% endblock %}

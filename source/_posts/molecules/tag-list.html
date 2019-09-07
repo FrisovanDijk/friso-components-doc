@@ -1,0 +1,58 @@
+---
+layout: post
+title: Tag list
+tags:
+- molecule
+---
+
+<div class="mw6 ma1 center" id="tag-list"></div>
+<script>
+    parseComponentHTML("#tag-list", {
+        "name": "tag-list",
+        "vars": {
+            "tags": [
+                {"name": "Tag 1"},
+                {"name": "Tag 2"},
+                {"name": "Tag 3"},
+                {"name": "Tag 4"}
+            ]
+        }
+    });
+</script>
+<p>Linked tag list with title and color variation:</p>
+<div class="mw6 ma1 center" id="tag-list2"></div>
+<script>
+    parseComponentHTML("#tag-list2", {
+        "name": "tag-list",
+        "vars": {
+            "title": "Tag list",
+            "color": "accent3",
+            "tags": [
+                {"name": "Tag 1", "url": "#"},
+                {"name": "Tag 2", "url": "#"},
+                {"name": "Tag 3", "url": "#"},
+                {"name": "Tag 4", "url": "#"}
+            ]
+        }
+    });
+</script>
+
+<p>A list of tags.</p>
+
+<p>Example API call:</p>
+<pre><code>parseComponentHTML("#tag-list2", {
+    "name": "tag-list",
+    "vars": {
+        "title": "Tag list",
+        "color": "accent3",
+        "tags": [
+            {"name": "Tag 1", "url": "#"},
+            {"name": "Tag 2", "url": "#"},
+            {"name": "Tag 3", "url": "#"},
+            {"name": "Tag 4", "url": "#"}
+        ]
+    }
+});
+</code></pre>
+<p>Code:</p>
+<iframe src="https://component.frisovandijk.com/source/molecules/tag-list.mustache" class="w-100 h5 br3 bg-grays-light4"></iframe>

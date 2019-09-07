@@ -1,0 +1,35 @@
+---
+layout: post
+title: Breadcrumbs
+tags:
+- molecule
+---
+
+<div class="mv3" id="breadcrumbs"></div>
+<script>
+    parseComponentHTML("#breadcrumbs", {
+        "name": "breadcrumbs",
+        "vars": {
+            "items": [
+                {"name": "molecule", "url": "{{site.url}}/blog/tags/molecule"},
+                {"name": "{{page.title}}", "current?": true}
+            ]
+        }
+    });
+</script>
+
+<p>Breadcrumbs for accessible page navigation.</p>
+<p>Example API call:</p>
+<pre><code>parseComponentHTML("#breadcrumbs", {
+    "name": "breadcrumbs",
+    "vars": {
+        "items": [
+            {"name": "molecule", "url": "{{site.url}}/blog/tags/molecule"},
+            {"name": "{{page.title}}", "current?": true}
+        ]
+    }
+});
+</code></pre>
+
+<p>Code:</p>
+<iframe src="https://component.frisovandijk.com/source/molecules/breadcrumbs.mustache" class="w-100 h5 br3 bg-grays-light4"></iframe>
