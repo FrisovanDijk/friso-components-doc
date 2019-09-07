@@ -3,13 +3,13 @@
     <title><![CDATA[Friso&#039;s Component API Documentation]]></title>
     <link href="/blog/tags/molecule.xml" rel="self"/>
     <link href="/"/>
-    <updated>2019-09-07T23:48:53+02:00</updated>
+    <updated>2019-09-07T23:52:58+02:00</updated>
     <id>/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Alert]]></title>
             <link href="/molecules/alert/"/>
-            <updated>2019-09-07T23:48:53+02:00</updated>
+            <updated>2019-09-07T23:52:58+02:00</updated>
             <id>/molecules/alert/</id>
             <content type="html"><![CDATA[<div id="myalert"></div>
 <script>
@@ -43,13 +43,13 @@
 });
 </code></pre>
 <p>Code:</p>
-<iframe src="https://component.frisovandijk.com/source/molecules/alert.mustache" class="w-100 h5 br3 bg-grays-light4"></iframe>
+<iframe src="https://component.frisovandijk.com/api/source/molecules/alert.mustache" class="w-100 h5 br3 bg-grays-light4"></iframe>
 ]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[Breadcrumbs]]></title>
             <link href="/molecules/breadcrumbs/"/>
-            <updated>2019-09-07T23:48:53+02:00</updated>
+            <updated>2019-09-07T23:52:58+02:00</updated>
             <id>/molecules/breadcrumbs/</id>
             <content type="html"><![CDATA[<div class="mv3" id="breadcrumbs"></div>
 <script>
@@ -78,12 +78,12 @@
 </code></pre>
 
 <p>Code:</p>
-<iframe src="https://component.frisovandijk.com/source/molecules/breadcrumbs.mustache" class="w-100 h5 br3 bg-grays-light4"></iframe>]]></content>
+<iframe src="https://component.frisovandijk.com/api/source/molecules/breadcrumbs.mustache" class="w-100 h5 br3 bg-grays-light4"></iframe>]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[Ghost menu]]></title>
             <link href="/molecules/ghost-menu/"/>
-            <updated>2019-09-07T23:48:53+02:00</updated>
+            <updated>2019-09-07T23:52:58+02:00</updated>
             <id>/molecules/ghost-menu/</id>
             <content type="html"><![CDATA[<div class="mw6 ma1 center" id="ghost-menu1"></div>
 <script>
@@ -138,12 +138,12 @@
     });
 </code></pre>
 <p>Code:</p>
-<iframe src="https://component.frisovandijk.com/source/molecules/breadcrumbs.mustache" class="w-100 h5 br3 bg-grays-light4"></iframe>]]></content>
+<iframe src="https://component.frisovandijk.com/api/source/molecules/breadcrumbs.mustache" class="w-100 h5 br3 bg-grays-light4"></iframe>]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[Tag list]]></title>
             <link href="/molecules/tag-list/"/>
-            <updated>2019-09-07T23:48:53+02:00</updated>
+            <updated>2019-09-07T23:52:58+02:00</updated>
             <id>/molecules/tag-list/</id>
             <content type="html"><![CDATA[<div class="mw6 ma1 center" id="tag-list"></div>
 <script>
@@ -195,6 +195,6 @@
 });
 </code></pre>
 <p>Code:</p>
-<iframe src="https://component.frisovandijk.com/source/molecules/tag-list.mustache" class="w-100 h5 br3 bg-grays-light4"></iframe>]]></content>
+<iframe src="https://component.frisovandijk.com/api/source/molecules/tag-list.mustache" class="w-100 h5 br3 bg-grays-light4"></iframe>]]></content>
         </entry>
     </feed>

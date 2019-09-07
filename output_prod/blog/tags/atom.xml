@@ -3,13 +3,13 @@
     <title><![CDATA[Friso&#039;s Component API Documentation]]></title>
     <link href="/blog/tags/atom.xml" rel="self"/>
     <link href="/"/>
-    <updated>2019-09-07T23:48:53+02:00</updated>
+    <updated>2019-09-07T23:52:58+02:00</updated>
     <id>/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Button]]></title>
             <link href="/atoms/button/"/>
-            <updated>2019-09-07T23:48:53+02:00</updated>
+            <updated>2019-09-07T23:52:58+02:00</updated>
             <id>/atoms/button/</id>
             <content type="html"><![CDATA[<div class="w-100 ph3 pv2">
     <button class="btn btn-primary">Default</button>
@@ -34,12 +34,12 @@
 <pre class="mt2"><code>&lt;button class=""btn btn-primary h3">Tall&lt;/button></code></pre>
 
 <p>Button code:</p>
-<iframe src="https://component.frisovandijk.com/source/atoms/_button.scss" class="w-100 h5 br3 bg-grays-light4"></iframe>]]></content>
+<iframe src="https://component.frisovandijk.com/api/source/atoms/_button.scss" class="w-100 h5 br3 bg-grays-light4"></iframe>]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[Tag]]></title>
             <link href="/atoms/tag/"/>
-            <updated>2019-09-07T23:48:53+02:00</updated>
+            <updated>2019-09-07T23:52:58+02:00</updated>
             <id>/atoms/tag/</id>
             <content type="html"><![CDATA[<div class="w-100 bg-grays-white flex flex-wrap">
     <div class="tag tag-secondary">tagged</div>
@@ -63,12 +63,12 @@
 <p>Behaviour added:</p>
 <pre><code>a>.tag-[color]:hover, a.tag-[color]:hover</code></pre>
 <p>Tag code:</p>
-<iframe src="https://component.frisovandijk.com/source/atoms/_tag.scss" class="w-100 h5 br3 bg-grays-light4"></iframe>]]></content>
+<iframe src="https://component.frisovandijk.com/api/source/atoms/_tag.scss" class="w-100 h5 br3 bg-grays-light4"></iframe>]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[Wave]]></title>
             <link href="/atoms/wave/"/>
-            <updated>2019-09-07T23:48:53+02:00</updated>
+            <updated>2019-09-07T23:52:58+02:00</updated>
             <id>/atoms/wave/</id>
             <content type="html"><![CDATA[<div class="w-100 mv4 pb5 bg-grays-white">
     <div class="w-100 bg-primary pt4">
@@ -108,7 +108,7 @@
     &lt;/svg&gt;
 </code></pre>
     <p>Wave code:</p>
-    <iframe src="https://component.frisovandijk.com/source/atoms/_wave.scss" class="w-100 h5 br3 bg-grays-light4"></iframe>
+    <iframe src="https://component.frisovandijk.com/api/source/atoms/_wave.scss" class="w-100 h5 br3 bg-grays-light4"></iframe>
 </div>]]></content>
         </entry>
     </feed>
