@@ -1,6 +1,7 @@
 composer.phar
 /vendor/
 /output_dev/
+/output_prod/
 /docs/
 /.idea/
 app/config/sculpin_site_prod.yml

@@ -12,7 +12,7 @@ use:
             "color": "secondary",
             "tags": [
                 {% for tag,posts in data.posts_tags %}
-                    {"name": "{{ tag }}", "url": "{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}"},
+                    {"name": "{{ tag }}", "url": "{{ site.url }}/{{ tag|url_encode(true) }}"},
                 {% endfor %}
             ]
         }
