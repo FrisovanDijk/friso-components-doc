@@ -1,0 +1,36 @@
+---
+layout: post
+title: Branded box
+tags:
+- molecules
+---
+
+<div class="mv3" id="branded-box"></div>
+<script>
+    parseComponentHTML("#branded-box", {
+        "name": "branded-box",
+        "vars": {
+            title: 'Title',
+            content: 'Content',
+            color: 'secondary',
+            "button?": true,
+            buttonText: "Click me",
+            buttonLink: "#"
+        }
+    });
+</script>
+
+<p>Branded box for showing off content.</p>
+<p>Example API call:</p>
+<pre><code>parseComponentHTML("#branded-box", {
+    "name": "branded-box",
+    "vars": {
+        title: 'Title',
+        content: 'Content',
+        color: 'secondary'
+    }
+});
+</code></pre>
+
+<p>Code:</p>
+<iframe src="https://component.frisovandijk.com/api/source/molecules/branded-box.mustache" class="w-100 h5 br3 bg-grays-light4"></iframe>
